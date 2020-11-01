@@ -29,6 +29,7 @@ services:
     ports:
       - "5044:5044"
       - "5000:5000"
+      - "28777:28777"
       - "9600:9600"
     configs:
       - source: logstash_config
@@ -60,10 +61,6 @@ configs:
 
   elastic_config:
     file: ./elasticsearch/config/elasticsearch.yml
-  logstash_config:
-    file: ./logstash/config/logstash.yml
-  logstash_pipeline:
-    file: ./logstash/pipeline/logstash.conf
   kibana_config:
     file: ./kibana/config/kibana.yml
 
